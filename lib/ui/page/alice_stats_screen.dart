@@ -14,9 +14,7 @@ class AliceStatsScreen extends StatelessWidget {
     return Directionality(
       textDirection: aliceCore.directionality ?? Directionality.of(context),
       child: Theme(
-        data: ThemeData(
-          brightness: aliceCore.brightness,
-          colorScheme: ColorScheme.light(secondary: AliceConstants.lightRed),
+        data: ThemeData.dark(
         ),
         child: Scaffold(
           appBar: AppBar(

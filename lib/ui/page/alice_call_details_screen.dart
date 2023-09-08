@@ -34,9 +34,7 @@ class _AliceCallDetailsScreenState extends State<AliceCallDetailsScreen>
     return Directionality(
       textDirection: widget.core.directionality ?? Directionality.of(context),
       child: Theme(
-        data: ThemeData(
-          brightness: widget.core.brightness,
-          colorScheme: ColorScheme.light(secondary: AliceConstants.lightRed),
+        data: ThemeData.dark(
         ),
         child: StreamBuilder<List<AliceHttpCall>>(
           stream: widget.core.callsSubject,

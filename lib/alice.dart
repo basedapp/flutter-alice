@@ -110,7 +110,12 @@ class Alice {
 
   /// Opens Http calls inspector. This will navigate user to the new fullscreen
   /// page where all listened http calls can be viewed.
-  void showInspector() {
+  void showInspector({bool useRouter = true}) {
+    print("void showInspector() $useRouter");
+    // if (useRouter) {
+    //   _navigatorKey?.currentContext?.push("/alice");
+    // } else {
+    // }
     aliceCore.navigateToCallListScreen();
   }
 

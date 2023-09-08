@@ -79,9 +79,9 @@ class _AliceCallsListScreenState extends State<AliceCallsListScreen>
       textDirection:
           widget._aliceCore.directionality ?? Directionality.of(context),
       child: Theme(
-        data: ThemeData(
-          brightness: widget._aliceCore.brightness,
-          colorScheme: ColorScheme.light(secondary: AliceConstants.lightRed),
+        data: ThemeData.dark(
+            // brightness: widget._aliceCore.brightness,
+            // colorScheme: ColorScheme.light(secondary: AliceConstants.lightRed),
         ),
         child: Scaffold(
           appBar: AppBar(
@@ -462,8 +462,7 @@ class _AliceCallsListScreenState extends State<AliceCallsListScreen>
       context: context,
       builder: (BuildContext buildContext) {
         return Theme(
-          data: ThemeData(
-            brightness: Brightness.light,
+          data: ThemeData.dark(
           ),
           child: AlertDialog(
             title: const Text("Select filter"),
