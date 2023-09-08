@@ -43,7 +43,7 @@ class AliceCore {
   ///Flag used to show/hide share button
   final bool? showShareButton;
 
-  final AliceLogger _aliceLogger = AliceLogger();
+  final AliceLogger aliceLogger = AliceLogger();
 
   late FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin;
   GlobalKey<NavigatorState>? navigatorKey;
@@ -139,7 +139,7 @@ class AliceCore {
       Navigator.push<void>(
         context,
         MaterialPageRoute(
-          builder: (context) => AliceCallsListScreen(this, _aliceLogger),
+          builder: (context) => AliceCallsListScreen(this, aliceLogger),
         ),
       ).then((onValue) => _isInspectorOpened = false);
     }
@@ -311,11 +311,11 @@ class AliceCore {
 
   /// Adds new log to Alice logger.
   void addLog(AliceLog log) {
-    _aliceLogger.logs.add(log);
+    aliceLogger.logs.add(log);
   }
 
   /// Adds list of logs to Alice logger
   void addLogs(List<AliceLog> logs) {
-    _aliceLogger.logs.addAll(logs);
+    aliceLogger.logs.addAll(logs);
   }
 }
